@@ -10,7 +10,7 @@ const Frontpage = () => {
     };
 
     return (
-        <div className="h-screen w-screen bg-black m-0 p-0">
+        <div className="h-screen w-screen bg-black m-0 p-0 box-border">
             <Navbar />
             <div className="h-full w-full flex flex-col lg:flex-row items-center justify-center p-6 lg:p-12">
 
@@ -36,11 +36,11 @@ const Frontpage = () => {
                 </div>
 
                 {/* Right Section */}
-                <div className="h-auto lg:h-full w-full lg:w-1/2 flex justify-center items-center">
+                <div className="h-auto lg:h-full w-full lg:w-1/2 flex justify-center items-center mt-[-5rem]">
                     <img
                         src="/images/Visual data-bro.png"
                         alt="Analyze Content"
-                        className="w-full max-w-lg object-contain lg:max-w-xl"
+                        className="w-full max-w-lg object-contain lg:max-w-xl h-full"
                     />
                 </div>
             </div>

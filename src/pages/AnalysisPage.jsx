@@ -68,40 +68,31 @@ const AnalysisPage = ({ result }) => {
     }, [result]); // Dependency array ensures this runs only when `result` changes
 
     return (
+        <div className="h-100 w-90 bg-black">
+            <h1 className="text-white font-nunito font-bold text-2xl md:text-4xl leading-snug text-center mb-5 pt-10">
+                Social Media Post Analysis
+            </h1>
+            <div className="flex flex-col lg:flex-row h-auto lg:h-5/6 w-full">
+                
+                {/* Left Section */}
+                <div className="w-full lg:w-1/2 flex flex-col items-center gap-10 mt-10 bg-gradient-to-br from-gray-800 via-gray-900 to-black p-6">
+                    <div className="w-full lg:w-5/6 h-auto lg:h-1/4 bg-red-400 shadow-xl rounded-lg flex flex-col items-center justify-evenly p-6 mb-10">
+                        <h1 className="font-bold text-4xl text-orange-950">Sentiment</h1>
+                        <h2 className="text-2xl text-white font-nunito">{sentimentText}</h2>
+                    </div>
 
-        <div className='h-2screen w-screen bg-black'>
-         <h1 className="text-white font-nunito font-bold text-4xl md:text-6xl leading-snug text-center mb-5 pt-4">
-            Social Media Post Analysis
-        </h1>
-        <div className='flex h-5/6 w-full   '>
-        <div className='w-1/2 flex flex-col  items-center gap-10 mt-10 bg-gradient-to-br from-gray-800 via-gray-900 to-black '>
-        <div className='w-5/6 h-1/4 bg-red-400 shadow-xl rounded-lg flex  flex-col items-center justify-evenly m-10 '>
-           <h1 className='font font-bold text-4xl  text-orange-950'>Sentiment</h1>
-           <h2 className='text-2xl text-white font-nunito'>{sentimentText}</h2>
-          
+                    <div className="w-full lg:w-5/6 h-auto lg:h-1/2 shadow-xl rounded-lg flex flex-col items-center justify-evenly p-6">
+                        <SuggestedHashtags keywords={keywords} />
+                    </div>
+                </div>
 
+                {/* Right Section */}
+                <div className="w-full lg:w-1/2 h-auto bg-black p-6">
+                    <SuggestedImprovements text={result} />
+                </div>
+
+            </div>
         </div>
-        <div className='w-5/6 h-1/2  shadow-xl rounded-lg flex  flex-col 5 items-center  '>
-        
-           <SuggestedHashtags keywords={keywords} />
-          
-          
-          
-
-        </div>
-
-        </div>
-
-        {/* Suggestion Let side */}
-             <div className='w-1/2 h-auto bg-black'>
-             <SuggestedImprovements text={result} />
-                  
-             </div>
-        </div>
-
-    </div>
- 
-    
     );
 };
 

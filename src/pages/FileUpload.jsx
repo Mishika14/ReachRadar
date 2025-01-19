@@ -65,7 +65,7 @@ const FileUpload = () => {
 
     return (
         <>
-            <div className="min-h-screen bg-black flex flex-col lg:flex-row">
+            <div className="min-h-100 bg-black flex flex-col lg:flex-row">
                 {/* Toast container */}
                 <ToastContainer />
                 {/* Left Section */}
@@ -97,7 +97,7 @@ const FileUpload = () => {
                             />
                             <label
                                 htmlFor="fileInput"
-                                className="bg-gray-300 hover:bg-gray-400 text-gray-700 px-6 py-2 rounded-lg cursor-pointer"
+                                className="bg-gray-300 hover:bg-gray-400 text-gray-700 px-8 py-3 rounded-lg cursor-pointer"
                             >
                                 Select File
                             </label>
