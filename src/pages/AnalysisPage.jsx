@@ -80,7 +80,7 @@ const AnalysisPage = ({ result }) => {
                     {/* Sentiment Box */}
                     <div className="w-full lg:w-5/6 h-auto lg:h-1/4 bg-red-400 shadow-xl rounded-lg flex flex-col items-center justify-center p-6 mb-10">
                         <h1 className="font-bold text-4xl text-orange-950">Sentiment</h1>
-                        <h2 className="text-2xl text-white font-nunito text-center">{sentimentText}</h2>
+                        <h2 className="text-2xl text-white font-nunito text-center mt-10">{sentimentText}</h2>
                     </div>
 
                     {/* Suggested Hashtags */}
