@@ -17,7 +17,8 @@ export const analyzeSentiment = async (text) => {
       messages: [
         {
           role: "user",
-          content: `Analyze the sentiment of the following text and return one word: POSITIVE, NEGATIVE, or NEUTRAL. Here is the input text: "${text}"`
+          content: `Analyze the sentiment of the input text and return only one word as an answer from the following responses: 
+(POSITIVE, NEGATIVE, NEUTRAL) Note: No phrases or sentences should be returned. The input text is as follows: "${text}"`
         }
       ],
       max_tokens: 10, // Limit tokens as only one word is expected
