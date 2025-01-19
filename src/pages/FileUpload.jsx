@@ -65,17 +65,18 @@ const FileUpload = () => {
 
     return (
         <>
-            <div className="min-h-100 bg-black flex flex-col lg:flex-row">
+            <div className="min-h-screen bg-black flex flex-col lg:flex-row">
                 {/* Toast container */}
                 <ToastContainer />
+                
                 {/* Left Section */}
-                <div className="flex-1 flex flex-col justify-around items-center p-6 bg-black text-white shadow-lg">
+                <div className="flex-1 flex flex-col justify-center items-center p-6 bg-black text-white shadow-lg lg:w-1/2">
                     <h1 className="text-2xl md:text-4xl font-bold text-center mb-8">
                         Upload Your Documents Here
                     </h1>
 
                     <div
-                        className={`border-dashed border-4 rounded-lg h-1/2 p-6 w-full max-w-lg text-center transition-all duration-300 ${
+                        className={`border-dashed border-4 rounded-lg h-1/2 w-full max-w-lg text-center transition-all duration-300 ${
                             dragActive ? "bg-gray-200 border-black" : "bg-slate-600 border-gray-400"
                         }`}
                         onDragEnter={handleDrag}
@@ -118,7 +119,7 @@ const FileUpload = () => {
                 </div>
 
                 {/* Right Section */}
-                <div className="flex-1 flex flex-col justify-center items-center p-6 bg-gradient-to-br from-gray-800 via-gray-900 to-black">
+                <div className="flex-1 flex flex-col justify-center items-center p-6 bg-gradient-to-br from-gray-800 via-gray-900 to-black lg:w-1/2">
                     <div className="w-full max-w-3xl h-[600px] bg-white flex flex-col items-center text-black p-8 rounded-2xl shadow-2xl overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
                         <h3 className="text-4xl font-extrabold font-nunito mb-6 text-gray-900 text-center tracking-wide">
                             Extracted Text
@@ -135,6 +136,8 @@ const FileUpload = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Conditional rendering for the Analysis page */}
             {resultText && <AnalysisPage result={resultText} />}
         </>
     );
