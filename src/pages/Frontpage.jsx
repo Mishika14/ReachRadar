@@ -10,7 +10,7 @@ const Frontpage = () => {
     };
 
     return (
-        <div className="h-screen w-screen bg-black">
+        <div className="h-screen w-screen bg-black m-0 p-0">
             <Navbar />
             <div className="h-full w-full flex flex-col lg:flex-row items-center justify-center p-6 lg:p-12">
 
